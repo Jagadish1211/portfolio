@@ -1,5 +1,5 @@
 import React from "react";
-import Calculatorapp from "./Calculator/Calculator JS" 
+import Calculatorapp from "./Calculator2/Calculator JS" 
 import Todolistapp from "./Todolist/ToDoApp JS";
 
 function Projects(){

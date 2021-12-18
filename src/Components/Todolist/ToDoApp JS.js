@@ -20,7 +20,7 @@ function Todolistapp() {
     submit.preventDefault();
    let newTask = [...task];
     newTask.push({
-      id: uuid(),
+      id: newTask.length,
       taskname: entry,
     });
     setTask(newTask);
@@ -60,7 +60,7 @@ function Todolistapp() {
       {editingEntry === -1 ?"ADD TASK": "SAVE EDIT"}
     </button>
     <div>
-     {task.map((tasks, index)=> (tasks.taskname?(<Taskcard key={uuid()} index={index} id={tasks.id} edit={Edittask} oncheck={Deltask} task={tasks.taskname} />): null))};
+     {task.map((tasks, index)=> (tasks.taskname?(<Taskcard key={tasks.id} index={index} id={tasks.id} edit={Edittask} oncheck={Deltask} task={tasks.taskname} />): null))};
     </div>
     
    </div>
