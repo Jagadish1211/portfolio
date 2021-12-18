@@ -1,0 +1,103 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.container{
+    width:25rem;
+    min-height:48.5rem;
+    height:auto;
+    background-color: #5D3FD3;
+    text-align: center;
+    justify-self: center;
+    border-radius: 5rem;
+}
+.heading{
+    font-size: 2.5rem;
+    font-family: 'Hind', sans-serif;
+    color: blanchedalmond;
+}
+
+div input{
+    width:19rem;
+    padding: 0.2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
+    font-family: 'Nunito Sans', sans-serif;
+    border: 0rem;
+    border-radius: 1.2rem;
+    transition: transform 150ms ease-in;
+    
+}
+
+.submitbtn{
+    margin: 1rem;
+    width:7rem;
+    font-size: 1rem;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #f88379;
+    color:white;
+    border:0;
+    border-radius: 1.1rem;
+    padding: 0.3em;
+    transition: background-color 125ms;
+}
+
+.submitbtn:hover {
+    background-color: yellowgreen;
+    font-weight:600;
+}
+
+.line-item{
+    display:inline-flex;
+    background-color:#191970 ;
+    width:22rem;
+    height:auto;
+    color:white;
+    font-size: 1.5rem;
+    padding:0.2rem;
+    align-items: center;
+    margin:0.7rem auto;
+    border-radius: 1.2rem;
+    white-space: initial;
+    transition: transform 150ms ease-in;
+}
+
+.line-item:hover{
+    transform: scale(1.05);
+    
+}
+
+div input:hover {
+    transform: scale(1.05);
+    
+}
+
+.item{
+    word-wrap:break-word;
+    flex-grow: 1;
+    flex-basis:auto;
+    white-space: initial;
+}
+
+.edit{
+    background-color: #f88379;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    flex-basis: content;
+    flex-grow: 0;
+    border-radius: 0.8rem;
+    margin-bottom: 0.35rem;
+    border:0;
+    transition: background-color 125ms;
+}
+
+.edit:hover{
+    background-color: yellowgreen;
+    font-weight:500;
+}
+
