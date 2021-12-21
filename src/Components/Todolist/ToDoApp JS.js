@@ -2,7 +2,7 @@ import React from "react";
 import './ToDoApp CSS.css';
 import Taskcard from './Components/Task_card';
 import {useState} from "react";
-import { uuid } from 'uuidv4';
+
 
  
 
@@ -48,12 +48,12 @@ function Todolistapp() {
 
   return (
     <div className="Outer-container">
-   <div className="container">
-    <h1 className= "heading">
+   <div className="containertodo">
+    <h1 className= "headingtodo">
       TO-DO List
     </h1>
     <p styles={{color:"white"}}>{editingEntry === -1 ? "" : `EDITING TASK ${editingEntry+1}`}</p>
-    <input onChange={handlechange} type="text" value={entry} placeholder="Add to list.." >
+    <input className="textinput" onChange={handlechange} type="text" value={entry} placeholder="Add to list.." >
     
     </input>
     <button onClick={editingEntry === -1 ? handlesubmit : updateTask} className="submitbtn" type="submit" name="Add_task">

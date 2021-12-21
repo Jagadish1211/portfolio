@@ -4,24 +4,27 @@ import Header from "./Components/Heading-bar";
 import Intro from './Components/Intro';
 import Aboutme from  "./Components/Aboutme";
 import Projects from "./Components/Projects"
-
+import Contact from './Components/Contactme';
 
 
 function App() {
   return (
     <div className="Container">
-      <section>
+      <section className='section-header'>
         <Header />
       </section>
-      <section>
+      <section className='section-intro'>
         <Intro />
       </section>
-      <section>
+      <section className='section-aboutme'>
         <Aboutme />
       </section>
-      <section>
+      <section className='section-projects'>
         <Projects />
       </section>
+      <footer>
+        <Contact />
+      </footer>
     </div>
   );
 }

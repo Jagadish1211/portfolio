@@ -31,7 +31,7 @@ catch{
 }
   return (
     <div className="containercal">
-        <div className= "textarea">
+        <div className= "textareacal">
           <input className="inputcal" type="text" value={result}/>
         </div>
         <div className="button_area">
