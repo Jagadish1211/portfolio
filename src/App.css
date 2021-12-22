@@ -29,7 +29,23 @@ footer{
     gap: 5px;
 }
 
-@media screen and (max-width: 480px){
+
+.certificates_list{
+    justify-content: left;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.section-projects{
+    background-color:#f5f5f5 ;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+@media only screen and (max-width: 480px){
     .header img{
         width: 3.5rem;
         height:3.5rem;
@@ -44,9 +60,7 @@ footer{
         font-family: 'Open Sans', sans-serif;
     }
 
-    .container{
-        max-width: 320px;
-    }
+    
 
     .section-header{
         height: 4.5rem;
@@ -71,15 +85,9 @@ footer{
         text-align: center;
         font-family: 'Open Sans', sans-serif;
         background-color: #e5e4e2;
-        height: 19rem;
+        height: 16rem;
         padding: 10px;
-    }
-
-    .section-aboutme h2 {
-        padding-top:1.5rem ;
-        padding-bottom: 2.5rem;
-        font-size: 2rem;
-        font-family: 'Open Sans', sans-serif;
+        font-size: 1rem;
     }
 
 
@@ -99,19 +107,7 @@ footer{
         transition: font-size 0.25s;
     }
 
-    .certificates_list{
-        justify-content: left;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-
-    .section-projects{
-        background-color:#f5f5f5 ;
-        display: flex;
-        justify-content: center;
-
-    }
+    
 
     .Calapp{
         display: flex;
@@ -178,10 +174,10 @@ footer{
       }
 
       
-}
+
     .clear_btn{
         width: 45.5%;
-}
+    }
     .containertodo{
     width:16rem;
     min-height:30rem;
@@ -233,5 +229,224 @@ footer{
        height:5rem;
        margin-top: 15px;
    }
+}
+
+   @media only screen and (min-width:480px) {
+    .section-header{
+        height: 3.5rem;
+        font-family: 'Open Sans', sans-serif;
+    }
+       
+    .header img{
+        width: 3.8rem;
+        height:3.5rem;
+        margin-left: 8px;
+        margin-top: 8px;
+    
+    }
+
+    .section-header{
+        height: 4.5rem;
+        font-family: 'Open Sans', sans-serif;
+    
+   }
+
+   .section-intro{
+    width:100%;
+    height:20rem;
+    background-color:#f5f5f5;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px;
+    border-bottom: white 4px solid;
+}
 
 
+.name{
+    font-size: 3.5rem;
+    padding:10px;
+    font-family: 'Open Sans', sans-serif;
+   }
+
+
+.section-aboutme{
+    align-items: top;
+    display: flex;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #e5e4e2;
+    height: 24rem;
+    padding: 30px;
+    font-size: 1.5rem;
+}
+
+.workexp_btn{
+    border: none;
+    font-size: 2rem;
+    padding: 15px 10px 15px 10px;
+    margin-bottom: 25px;
+    transition: font-size 0.25s;
+}
+
+.Certifications_btn{
+    border: none;
+    font-size: 2rem;
+    padding: 15px 10px 15px 10px;
+    margin-bottom: 25px;
+    transition: font-size 0.32s;
+}
+
+.Calapp{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.todoapp{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+
+.section-projects h2{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 2.7rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.section-projects h3{
+    display: flex;
+    justify-content: center;
+    margin: 25px auto;
+    font-size: 2.2rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.containercal{
+    background-color: black;
+    width:25em;
+    height: 29em;
+    border: 1em black;
+    border-radius: 0.5rem;
+    padding-top: 0.2rem;
+  }
+
+
+  .inputcal{
+    width:23.5rem;
+    font-size: 2rem;
+    height: 4.5rem;
+    background-color: #383838;
+    color:white;
+    text-align: end;
+    border-radius: 0.5rem;
+    margin: 0.28rem 0.08rem 0.28rem 0.42rem;
+    }
+
+
+    .button{
+        width:5.65rem;
+        height: 4.2rem;
+        background-color: #202020;
+        font-size: 1.2rem;
+        border: black 1rem;
+        border-radius: 0.3rem;
+        color: white;
+        margin: 0.2rem 0.08rem 0.2rem 0.42rem;
+      }
+
+
+
+      .clear_btn{
+          width: 47%;
+      }
+
+      .Caldesc{
+          font-size: 1.5rem;
+          margin: 1.5rem;
+      }
+
+      .containertodo{
+        width:25rem;
+        min-height:48.5rem;
+        height:auto;
+        background-color: #5D3FD3;
+        text-align: center;
+        justify-self: center;
+        border-radius: 3rem;
+    }
+
+
+    .headingtodo{
+        font-size: 2.5rem;
+        font-family: 'Hind', sans-serif;
+        color: blanchedalmond;
+        margin-bottom: 1rem;
+    }
+
+    .textinput{
+        width: 19rem;
+        padding: 0.2rem;
+        font-size: 1.5rem;
+        transition: transform 150ms ease-in;
+    }
+
+
+    .submitbtn{
+        margin: 1rem;
+        width:7rem;
+        font-size: 1rem;
+        transition: background-color 125ms;
+    }
+
+    .line-item{
+        width:22rem;
+        font-size: 1.5rem;
+    }
+
+    .item{
+        word-wrap:break-word;
+        flex-grow: 1;
+        flex-basis:auto;
+        white-space: initial;
+    }
+    
+    .edit{
+        background-color: #f88379;
+        color:white;
+        font-family: 'Roboto', sans-serif;
+        flex-basis: content;
+        flex-grow: 0;
+        font-size: 0.7rem;
+        border-radius: 0.8rem;
+        margin-bottom: 0.5rem;
+        border:0;
+        transition: background-color 125ms;
+    }
+    .tododesc{
+        font-size: 1.5rem;
+        margin: 1.5rem;
+    }
+
+
+    footer{
+        height:10rem;
+        margin-top: 20px;
+        font-size: 1.5rem;
+    }
+ 
+}
