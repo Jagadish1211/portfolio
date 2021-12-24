@@ -7,10 +7,10 @@ function Header(){
         <div className="header">
            <img src={logo} alt=""></img> 
            <div className="headerbtn">
-                <Button name="Home"/>
-                <Button name="About me"/>
-                <Button name="Projects"/>
-                <Button name="Resume"/>
+                <a href="#" > Home </a>
+                <a href="#" > About Me </a>
+                <a href="#" > Projects </a>
+                <a href="#" > Resume </a>
            </div>
         </div>
     )

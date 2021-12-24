@@ -1,547 +1,591 @@
-*{
-box-sizing: border-box;
-padding:0;
-margin:0;
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url("./assets/font/Montserrat-Regular.ttf");
 }
 
-.container{
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("./assets/font/Montserrat-Bold.ttf");
+}
+
+.bold {
+  font-family: "Montserrat Bold";
+}
+
+@font-face {
+  font-family: "Montserrat Semibold";
+  src: url("./assets/font/Montserrat-SemiBold.ttf");
+}
+
+.semi {
+  font-family: "Montserrat Semibold";
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat Regular";
+}
+
+.container {
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+.section-header {
+  width: 100%;
+  background: linear-gradient(to right, black, #101010);
+  display: flex;
+  position: fixed;
+}
+
+footer {
+  width: 100%;
+  background: linear-gradient(to right, black, #101010);
+  display: flex;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-links {
+  display: flex;
+  gap: 5px;
+}
+
+.certificates_list {
+  /* justify-content: left; */
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  padding: 0 1rem;
+}
+
+.certificates_list > li {
+  /* font-size: 0.75rem; */
+}
+
+.section-projects {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+}
+
+.section-header .headerbtn{
+    gap: 1.5rem;
+}
+
+.section-header a{
+    text-decoration: none;
+    padding: 0 5px;
+  color: white;
+  position: relative;
+}
+
+.section-header a:after{
+	content: '';
+	position: absolute;
+	bottom: -8px;
+	left:0;
+	width: 100%;
+	height: 2px;
+	background: white;
+	transform: scale(0,1);
+	transition: transform 0.3s ease-in-out;
+}
+
+.section-header a:hover:after{
+	transform: scale(1,1);
+}
+
+.section-intro p{
+    /* transform: translateY(0%);
+    opacity: 1; */
+    animation: slideUpFadeIn 1.2s linear 0s 1;
+}
+
+@keyframes slideUpFadeIn {
+    0%{
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+  .header img {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-left: 8px;
+    margin-top: 8px;
+  }
+
+  .headerbtn {
+    visibility: hidden;
+  }
+
+  .name {
+    font-size: 3rem;
+    padding: 10px;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .section-header {
+    height: 4.5rem;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .section-intro {
     width: 100%;
-    font-family: 'Open Sans', sans-serif;
-}
-.section-header{
-    width:100%;
-    background:linear-gradient(to right,black,#101010);
+    height: 20rem;
+    background-color: #f5f5f5;
+    text-align: center;
     display: flex;
-    position: fixed;
-}
-
-footer{
-    width:100%;
-    background:linear-gradient(to right,black,#101010);
-    display: flex;
-    color:white;
-    font-family: 'Open Sans', sans-serif;
-    justify-content: center;
     align-items: center;
-}
-
-.contact-links{
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+    padding: 5px;
+    border-bottom: white 2px solid;
+  }
+  .section-aboutme {
+    align-items: top;
     display: flex;
-    gap: 5px;
-}
+    text-align: left;
+    font-family: "Open Sans", sans-serif;
+    background-color: #e5e4e2;
+    min-height: 16rem;
+    height: auto;
+    padding: 10px 25px 20px 25px;
+    font-size: 1rem;
+  }
 
+  .workexp_btn {
+    border: none;
+    font-size: 1.2rem;
+    padding: 15px 10px 15px 10px;
+    margin-bottom: 25px;
+    transition: font-size 0.25s;
+    background-color: transparent;
+  }
 
-.certificates_list{
-    justify-content: left;
-    display: flex;
-    flex-wrap: wrap;
-}
+  .Certifications_btn {
+    border: none;
+    font-size: 1.2rem;
+    padding: 15px 10px 15px 10px;
+    margin-bottom: 25px;
+    transition: font-size 0.25s;
+    background-color: transparent;
+  }
 
-
-.section-projects{
-    background-color:#f5f5f5 ;
+  .Calapp {
     display: flex;
     justify-content: center;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    flex-wrap: wrap;
+    padding: 4px;
+  }
 
-}
+  .todoapp {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    flex-wrap: wrap;
+    padding: 7px;
+  }
 
+  .section-projects h3 {
+    display: flex;
+    justify-content: center;
+    margin: 15px auto;
+    font-size: 1.5rem;
+    font-family: "Open Sans", sans-serif;
+  }
 
-@media only screen and (max-width: 480px){
-    .header img{
-        width: 3.5rem;
-        height:3.5rem;
-        margin-left: 8px;
-        margin-top: 8px;
-    
-    }
+  .section-projects h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 2rem;
+    font-family: "Open Sans", sans-serif;
+  }
 
-    .headerbtn{
-        visibility: hidden;
-    }
+  .containercal {
+    background-color: black;
+    width: 16em;
+    height: 20em;
+    border: 0.5em black;
+    border-radius: 0.2rem;
+    padding-top: 0.1rem;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
 
+  .inputcal {
+    width: 15.8rem;
+    font-size: 1.4rem;
+    background-color: #383838;
+    color: white;
+    text-align: end;
+  }
 
-    .name{
-        font-size: 3rem;
-        padding:10px;
-        font-family: 'Open Sans', sans-serif;
-    }
+  .button {
+    width: 3.35rem;
+    height: 3.15rem;
+    background-color: #202020;
+    font-size: 0.9rem;
+    border: black 1rem;
+    border-radius: 0.3rem;
+    color: white;
+    margin: 0.2rem 0.25rem 0.2rem 0.25rem;
+  }
 
-    
-
-    .section-header{
-        height: 4.5rem;
-        font-family: 'Open Sans', sans-serif;
-    }
-
-    .section-intro{
-        width:100%;
-        height:20rem;
-        background-color:#f5f5f5;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        font-size: 1rem;
-        font-family: 'Open Sans', sans-serif;
-        padding: 5px;
-        border-bottom: white 2px solid;
-    }
-    .section-aboutme{
-        align-items: top;
-        display: flex;
-        text-align: left;
-        font-family: 'Open Sans', sans-serif;
-        background-color: #e5e4e2;
-        min-height: 16rem;
-        height: auto;
-        padding: 10px 25px 20px 25px;
-        font-size: 1rem;
-    }
-
-
-    .workexp_btn{
-        border: none;
-        font-size: 1.2rem;
-        padding: 15px 10px 15px 10px;
-        margin-bottom: 25px;
-        transition: font-size 0.25s;
-        background-color: transparent;
-    }
-
-    .Certifications_btn{
-        border: none;
-        font-size: 1.2rem;
-        padding: 15px 10px 15px 10px;
-        margin-bottom: 25px;
-        transition: font-size 0.25s;
-        background-color: transparent;
-    }
-
-    
-
-    .Calapp{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        font-family: 'Open Sans', sans-serif;
-        flex-wrap: wrap;
-        padding: 4px;
-    }
-
-    .todoapp{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        font-family: 'Open Sans', sans-serif;
-        flex-wrap: wrap;
-        padding: 7px;
-    }
-
-    .section-projects h3{
-        display: flex;
-        justify-content: center;
-        margin: 15px auto;
-        font-size: 1.5rem;
-        font-family: 'Open Sans', sans-serif;
-    }
-
-    .section-projects h2{
-        display: flex;
-        justify-content: center;
-        margin-top: 15px;
-        font-size: 2rem;
-        font-family: 'Open Sans', sans-serif;
-    }
-
-    .containercal{
-        background-color: black;
-        width:16em;
-        height: 20em;
-        border: 0.5em black;
-        border-radius: 0.2rem;
-        padding-top: 0.1rem;
-        margin-top: 25px;
-        margin-bottom: 25px;
-      }
-      
-    .inputcal{
-        width: 15.8rem;
-        font-size: 1.4rem;
-        background-color: #383838;
-        color:white;
-        text-align: end;
-    }
-
-    .button{
-        width:3.35rem;
-        height: 3.15rem;
-        background-color: #202020;
-        font-size: 0.9rem;
-        border: black 1rem;
-        border-radius: 0.3rem;
-        color: white;
-        margin: 0.2rem 0.25rem 0.2rem 0.25rem;
-      }
-
-      
-
-    .clear_btn{
-        width: 45.5%;
-    }
-    .containertodo{
-    width:16rem;
-    min-height:30rem;
-    height:auto;
-    background-color: #5D3FD3;
+  .clear_btn {
+    width: 45.5%;
+  }
+  .containertodo {
+    width: 16rem;
+    min-height: 30rem;
+    height: auto;
+    background-color: #5d3fd3;
     text-align: center;
     justify-self: center;
     border-radius: 1.5rem;
     margin-top: 25px;
     padding-top: 5px;
     margin-bottom: 25px;
-    }
+  }
 
-    .headingtodo{
-        font-size: 1.5rem;
-        font-family: 'Hind', sans-serif;
-        color: blanchedalmond;
-        padding-bottom: 6px;
-    }
-    
-    .textinput{
-    width:12rem;
+  .headingtodo {
+    font-size: 1.5rem;
+    font-family: "Hind", sans-serif;
+    color: blanchedalmond;
+    padding-bottom: 6px;
+  }
+
+  .textinput {
+    width: 12rem;
     padding: 0.2rem;
     font-size: 1rem;
-    
-    }
-    
-    .submitbtn{
+  }
+
+  .submitbtn {
     margin: 1rem;
-    width:5rem;
+    width: 5rem;
     font-size: 0.7rem;
-    
-    }
+  }
 
-    .line-item{
-        width:14rem;
-        font-size: 1rem;
-        transition: transform 150ms ease-in;
-    }
+  .line-item {
+    width: 14rem;
+    font-size: 1rem;
+    transition: transform 150ms ease-in;
+  }
 
-    .edit{
-        margin-bottom: 0.23rem;
-        font-size: 0.5rem;
-        padding:4px;
-        
-    }
+  .edit {
+    margin-bottom: 0.23rem;
+    font-size: 0.5rem;
+    padding: 4px;
+  }
 
-   footer{
-       height:5rem;
-       margin-top: 15px;
-   }
+  footer {
+    height: 5rem;
+    margin-top: 15px;
+  }
 }
 
-   @media only screen and (min-width:480px) {
-    .section-header{
-        height: 3.5rem;
-        font-family: 'Open Sans', sans-serif;
-    }
-       
-    .header img{
-        width: 3.8rem;
-        height:3.5rem;
-        margin-left: 8px;
-        margin-top: 8px;
-        flex-grow: 0;
-    }
+@media only screen and (min-width: 480px) {
+  .section-header {
+    height: 3.5rem;
+    font-family: "Open Sans", sans-serif;
+  }
 
-    .header{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width:100%;
-        
-    }
+  .header img {
+    width: 3.8rem;
+    height: 3.5rem;
+    margin-left: 8px;
+    margin-top: 8px;
+    flex-grow: 0;
+  }
 
-    .header button{
-        flex-grow: 0;
-        width:4rem;
-        font-size: 0.8rem;
-        padding:8px 2px;
-        margin:4px 3px;
-        flex-shrink: 0;
-        color: white;
-        background:transparent;
-        border:0;
-    }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
 
-     .header button:hover{
-        background-color: whitesmoke;
-        color:black;
-    } 
+  .header button {
+    flex-grow: 0;
+    width: 4rem;
+    font-size: 0.8rem;
+    padding: 8px 2px;
+    margin: 4px 3px;
+    flex-shrink: 0;
+    color: white;
+    background: transparent;
+    border: 0;
+  }
 
-    .headerbtn{
-        display: flex;
-        margin-right: 2rem;
-    }
+  .header button:hover {
+    background-color: whitesmoke;
+    color: black;
+  }
 
-    .section-header{
-        height: 4.5rem;
-        font-family: 'Open Sans', sans-serif;
-   }
+  .headerbtn {
+    display: flex;
+    margin-right: 2rem;
+  }
 
-   .section-intro{
-    width:100%;
-    height:30rem;
-    background-color:#f5f5f5;
+  .section-header {
+    height: 4.5rem;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .section-intro {
+    width: 100%;
+    min-height: 100vh;
+    /* height: 30rem; */
+    background-color: #f5f5f5;
     text-align: center;
     display: flex;
     align-items: center;
     font-size: 1.5rem;
-    color:white;
-    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-family: "Open Sans", sans-serif;
     padding: 5px;
-    border-bottom: white 4px solid;
+    /* border-bottom: white 4px solid; */
     background-image: url(./Images/laptopdarkroom.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}
+  }
 
-
-.name{
+  .name {
     font-size: 3.5rem;
-    padding:10px;
-    font-family: 'Open Sans', sans-serif;
-   }
+    padding: 10px;
+    font-family: "Open Sans", sans-serif;
+  }
 
-
-.section-aboutme{
+  .section-aboutme {
     align-items: top;
     display: flex;
     text-align: left;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     background-color: #e5e4e2;
     min-height: 24rem;
     height: auto;
     padding: 30px 45px 35px 45px;
     font-size: 1.5rem;
-}
+  }
 
-.workexp_btn{
+  .workexp_btn {
     border: none;
     font-size: 2rem;
     padding: 15px 10px 15px 10px;
     margin-bottom: 25px;
     transition: font-size 0.25s;
     background-color: transparent;
-}
+  }
 
-.Certifications_btn{
+  .Certifications_btn {
     border: none;
     font-size: 2rem;
     padding: 15px 10px 15px 10px;
     margin-bottom: 25px;
     transition: font-size 0.32s;
     background-color: transparent;
-}
+  }
 
-.certificates_list li{
+  .certificates_list li {
     padding: 0.5rem;
-    }
+  }
 
-.Calapp{
+  .Calapp {
     display: flex;
     justify-content: center;
     text-align: center;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     flex-wrap: wrap;
     padding: 10px;
-}
+  }
 
-.todoapp{
+  .todoapp {
     display: flex;
     justify-content: center;
     text-align: center;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     flex-wrap: wrap;
     padding: 10px;
-}
+  }
 
-
-.section-projects h2{
+  .section-projects h2 {
     display: flex;
     justify-content: center;
     margin-top: 15px;
     font-size: 2.7rem;
-    font-family: 'Open Sans', sans-serif;
-}
+    font-family: "Open Sans", sans-serif;
+  }
 
-
-.section-projects h3{
+  .section-projects h3 {
     display: flex;
     justify-content: center;
     margin: 25px auto;
     font-size: 2.2rem;
-    font-family: 'Open Sans', sans-serif;
-}
+    font-family: "Open Sans", sans-serif;
+  }
 
-
-.containercal{
+  .containercal {
     background-color: black;
-    width:25em;
+    width: 25em;
     height: 29em;
     border: 1em black;
     border-radius: 0.5rem;
     padding-top: 0.2rem;
   }
 
-
-  .inputcal{
-    width:23.5rem;
+  .inputcal {
+    width: 23.5rem;
     font-size: 2rem;
     height: 4.5rem;
     background-color: #383838;
-    color:white;
+    color: white;
     text-align: end;
     border-radius: 0.5rem;
     margin: 0.28rem 0.08rem 0.28rem 0.42rem;
-    }
+  }
 
+  .button {
+    width: 5.65rem;
+    height: 4.2rem;
+    background-color: #202020;
+    font-size: 1.2rem;
+    border: black 1rem;
+    border-radius: 0.3rem;
+    color: white;
+    margin: 0.2rem 0.08rem 0.2rem 0.42rem;
+  }
 
-    .button{
-        width:5.65rem;
-        height: 4.2rem;
-        background-color: #202020;
-        font-size: 1.2rem;
-        border: black 1rem;
-        border-radius: 0.3rem;
-        color: white;
-        margin: 0.2rem 0.08rem 0.2rem 0.42rem;
-      }
+  .clear_btn {
+    width: 47%;
+  }
 
+  .Caldesc {
+    font-size: 1.5rem;
+    margin: 1.5rem;
+  }
 
+  .containertodo {
+    width: 25rem;
+    min-height: 40rem;
+    height: auto;
+    background-color: #5d3fd3;
+    text-align: center;
+    justify-self: center;
+    border-radius: 3rem;
+  }
 
-      .clear_btn{
-          width: 47%;
-      }
+  .headingtodo {
+    font-size: 2.5rem;
+    font-family: "Hind", sans-serif;
+    color: blanchedalmond;
+    margin-bottom: 1rem;
+  }
 
-      .Caldesc{
-          font-size: 1.5rem;
-          margin: 1.5rem;
-      }
+  .textinput {
+    width: 19rem;
+    padding: 0.2rem;
+    font-size: 1.5rem;
+    transition: transform 150ms ease-in;
+  }
 
-      .containertodo{
-        width:25rem;
-        min-height:40rem;
-        height:auto;
-        background-color: #5D3FD3;
-        text-align: center;
-        justify-self: center;
-        border-radius: 3rem;
-    }
+  .submitbtn {
+    margin: 1rem;
+    width: 7rem;
+    font-size: 1rem;
+    transition: background-color 125ms;
+  }
 
+  .line-item {
+    width: 22rem;
+    font-size: 1.5rem;
+  }
 
-    .headingtodo{
-        font-size: 2.5rem;
-        font-family: 'Hind', sans-serif;
-        color: blanchedalmond;
-        margin-bottom: 1rem;
-    }
+  .item {
+    word-wrap: break-word;
+    flex-grow: 1;
+    flex-basis: auto;
+    white-space: initial;
+  }
 
-    .textinput{
-        width: 19rem;
-        padding: 0.2rem;
-        font-size: 1.5rem;
-        transition: transform 150ms ease-in;
-    }
+  .edit {
+    background-color: #f88379;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    flex-basis: content;
+    flex-grow: 0;
+    font-size: 0.7rem;
+    border-radius: 0.8rem;
+    margin-bottom: 0.5rem;
+    border: 0;
+    transition: background-color 125ms;
+  }
+  .tododesc {
+    font-size: 1.5rem;
+    margin: 1.5rem;
+  }
 
-
-    .submitbtn{
-        margin: 1rem;
-        width:7rem;
-        font-size: 1rem;
-        transition: background-color 125ms;
-    }
-
-    .line-item{
-        width:22rem;
-        font-size: 1.5rem;
-    }
-
-    .item{
-        word-wrap:break-word;
-        flex-grow: 1;
-        flex-basis:auto;
-        white-space: initial;
-    }
-    
-    .edit{
-        background-color: #f88379;
-        color:white;
-        font-family: 'Roboto', sans-serif;
-        flex-basis: content;
-        flex-grow: 0;
-        font-size: 0.7rem;
-        border-radius: 0.8rem;
-        margin-bottom: 0.5rem;
-        border:0;
-        transition: background-color 125ms;
-    }
-    .tododesc{
-        font-size: 1.5rem;
-        margin: 1.5rem;
-    }
-
-
-    footer{
-        height:10rem;
-        margin-top: 20px;
-        font-size: 1.5rem;
-    }
- 
+  footer {
+    height: 10rem;
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
 }
 
-@media only screen and (min-width:768px) {
-    .section-intro{
-        height:45rem;
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        font-size: 1.8rem;
-    }
+@media only screen and (min-width: 768px) {
+  .section-intro {
+    height: 45rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.8rem;
+  }
 
-    .section-aboutme{
+  .section-aboutme {
     align-items: top;
     display: flex;
     text-align: left;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     background-color: #e5e4e2;
     min-height: 24rem;
     height: auto;
     padding: 35px 70px;
     font-size: 1.5rem;
-    }
+  }
 
+  .certificates_list {
+    padding: 30px 100px;
+    justify-content: left;
+  }
 
-    .certificates_list{
-        padding: 30px 100px;
-        justify-content: left;
-    }
-
-    .certificates_list li{
+  .certificates_list li {
     padding: 0.5rem;
-    }
+  }
 
-    .one-liner{
-        padding-right:35px;
-        padding-left:35px;
-    }
+  .one-liner {
+    padding-right: 35px;
+    padding-left: 35px;
+  }
 }
 
-@media screen and (min-width:1076px){
-    .certificates_list{
-        padding: 30px 120px;
-        justify-content: left;
-    }
-    
+@media screen and (min-width: 1076px) {
+  .certificates_list {
+    padding: 30px 120px;
+    justify-content: left;
+  }
 }
