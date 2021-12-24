@@ -12,6 +12,7 @@ margin:0;
     width:100%;
     background:linear-gradient(to right,black,#101010);
     display: flex;
+    position: fixed;
 }
 
 footer{
@@ -54,6 +55,11 @@ footer{
     
     }
 
+    .headerbtn{
+        visibility: hidden;
+    }
+
+
     .name{
         font-size: 3rem;
         padding:10px;
@@ -82,11 +88,12 @@ footer{
     .section-aboutme{
         align-items: top;
         display: flex;
-        text-align: center;
+        text-align: left;
         font-family: 'Open Sans', sans-serif;
         background-color: #e5e4e2;
-        height: 16rem;
-        padding: 10px;
+        min-height: 16rem;
+        height: auto;
+        padding: 10px 25px 20px 25px;
         font-size: 1rem;
     }
 
@@ -97,6 +104,7 @@ footer{
         padding: 15px 10px 15px 10px;
         margin-bottom: 25px;
         transition: font-size 0.25s;
+        background-color: transparent;
     }
 
     .Certifications_btn{
@@ -105,6 +113,7 @@ footer{
         padding: 15px 10px 15px 10px;
         margin-bottom: 25px;
         transition: font-size 0.25s;
+        background-color: transparent;
     }
 
     
@@ -242,26 +251,60 @@ footer{
         height:3.5rem;
         margin-left: 8px;
         margin-top: 8px;
-    
+        flex-grow: 0;
+    }
+
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width:100%;
+        
+    }
+
+    .header button{
+        flex-grow: 0;
+        width:4rem;
+        font-size: 0.8rem;
+        padding:8px 2px;
+        margin:4px 3px;
+        flex-shrink: 0;
+        color: white;
+        background:transparent;
+        border:0;
+    }
+
+     .header button:hover{
+        background-color: whitesmoke;
+        color:black;
+    } 
+
+    .headerbtn{
+        display: flex;
+        margin-right: 2rem;
     }
 
     .section-header{
         height: 4.5rem;
         font-family: 'Open Sans', sans-serif;
-    
    }
 
    .section-intro{
     width:100%;
-    height:20rem;
+    height:30rem;
     background-color:#f5f5f5;
     text-align: center;
     display: flex;
     align-items: center;
     font-size: 1.5rem;
+    color:white;
     font-family: 'Open Sans', sans-serif;
     padding: 5px;
     border-bottom: white 4px solid;
+    background-image: url(./Images/laptopdarkroom.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -275,11 +318,12 @@ footer{
 .section-aboutme{
     align-items: top;
     display: flex;
-    text-align: center;
+    text-align: left;
     font-family: 'Open Sans', sans-serif;
     background-color: #e5e4e2;
-    height: 24rem;
-    padding: 30px;
+    min-height: 24rem;
+    height: auto;
+    padding: 30px 45px 35px 45px;
     font-size: 1.5rem;
 }
 
@@ -289,6 +333,7 @@ footer{
     padding: 15px 10px 15px 10px;
     margin-bottom: 25px;
     transition: font-size 0.25s;
+    background-color: transparent;
 }
 
 .Certifications_btn{
@@ -297,7 +342,12 @@ footer{
     padding: 15px 10px 15px 10px;
     margin-bottom: 25px;
     transition: font-size 0.32s;
+    background-color: transparent;
 }
+
+.certificates_list li{
+    padding: 0.5rem;
+    }
 
 .Calapp{
     display: flex;
@@ -382,7 +432,7 @@ footer{
 
       .containertodo{
         width:25rem;
-        min-height:48.5rem;
+        min-height:40rem;
         height:auto;
         background-color: #5D3FD3;
         text-align: center;
@@ -449,4 +499,49 @@ footer{
         font-size: 1.5rem;
     }
  
+}
+
+@media only screen and (min-width:768px) {
+    .section-intro{
+        height:45rem;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: 1.8rem;
+    }
+
+    .section-aboutme{
+    align-items: top;
+    display: flex;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #e5e4e2;
+    min-height: 24rem;
+    height: auto;
+    padding: 35px 70px;
+    font-size: 1.5rem;
+    }
+
+
+    .certificates_list{
+        padding: 30px 100px;
+        justify-content: left;
+    }
+
+    .certificates_list li{
+    padding: 0.5rem;
+    }
+
+    .one-liner{
+        padding-right:35px;
+        padding-left:35px;
+    }
+}
+
+@media screen and (min-width:1076px){
+    .certificates_list{
+        padding: 30px 120px;
+        justify-content: left;
+    }
+    
 }
