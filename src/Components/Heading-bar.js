@@ -8,8 +8,8 @@ function Header(){
            <img src={logo} alt=""></img> 
            <div className="headerbtn">
                 <a href="#" > Home </a>
-                <a href="#" > About Me </a>
-                <a href="#" > Projects </a>
+                <a href="#Aboutme" > About Me </a>
+                <a href="#Projects" > Projects </a>
                 <a href="#" > Resume </a>
            </div>
         </div>

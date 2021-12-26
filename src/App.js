@@ -16,10 +16,10 @@ function App() {
       <section className='section-intro'>
         <Intro />
       </section>
-      <section className='section-aboutme'>
+      <section id ="Aboutme" className='section-aboutme'>
         <Aboutme />
       </section>
-      <section className='section-projects'>
+      <section id ="Projects" className='section-projects'>
         <Projects />
       </section>
       <footer>

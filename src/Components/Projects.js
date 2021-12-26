@@ -16,10 +16,10 @@ function Projects(){
             </div>
             <h3>To-Do List</h3>
             <div  className="todoapp">
-                <Todolistapp />
                 <div className="tododesc">This is a To-Do list app made using ReactJs. The items in the list are rendered using state changes in React components.
                     Each item can be editted and deleted individually  using the edit and delete button provided on it. 
                 </div>
+                <Todolistapp />
             </div>
         </div>
     )
