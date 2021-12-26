@@ -43,6 +43,7 @@ html{
   background: linear-gradient(to right, black, #101010);
   display: flex;
   position: fixed;
+  z-index: 1;
 }
 
 footer {
@@ -309,7 +310,7 @@ footer {
   }
 
   .edit {
-    margin-bottom: 0.23rem;
+    margin-bottom: 0px;
     font-size: 0.5rem;
     padding: 4px;
   }
@@ -548,6 +549,7 @@ footer {
   .line-item {
     width: 22rem;
     font-size: 1.5rem;
+    align-items: center;
   }
 
   .item {
@@ -561,12 +563,13 @@ footer {
     background-color: #f88379;
     color: white;
     font-family: "Roboto", sans-serif;
-    flex-basis: content;
+    flex-basis:auto;
     flex-grow: 0;
     font-size: 0.7rem;
     border-radius: 0.8rem;
-    margin-bottom: 0.5rem;
     border: 0;
+    width:2rem;
+    height: 1rem;
     transition: background-color 125ms;
   }
   .tododesc {

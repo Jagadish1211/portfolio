@@ -1,7 +1,7 @@
 import React from "react";
 import './ToDoApp CSS.css';
 import Taskcard from './Components/Task_card';
-import {useState} from "react";
+import {useState,useEffect} from "react";
 
 
  
@@ -29,8 +29,12 @@ function Todolistapp() {
   }
 
   function Deltask(id){
-    setTask(task.filter((e)=> id !== e.id ))
+    if (editingEntry === -1){
+      setTask(task.filter((e)=> id !== e.id ))
+    }else {
+      setEditingEntry(-1)
     }
+  }
   
   function Edittask(index){
     setEditingEntry(index);
