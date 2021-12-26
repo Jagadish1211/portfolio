@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useState,useEffect} from "react";
 import {AiFillLinkedin} from "react-icons/ai"
 import {SiGmail} from "react-icons/si"
 
