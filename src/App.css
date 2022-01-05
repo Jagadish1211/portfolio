@@ -21,7 +21,7 @@
   font-family: "Montserrat Semibold";
 }
 
-html{
+html {
   scroll-behavior: smooth;
   scroll-margin: 3rem;
 }
@@ -40,10 +40,11 @@ html{
 }
 .section-header {
   width: 100%;
-  background: linear-gradient(to right, black, #101010);
+  background: black;
   display: flex;
   position: fixed;
   z-index: 1;
+  color: white;
 }
 
 footer {
@@ -81,51 +82,51 @@ footer {
   scroll-margin: 4rem;
 }
 
-.section-header .headerbtn{
-    gap: 1.5rem;
+.section-header .headerbtn {
+  gap: 1.5rem;
 }
 
-.section-header a{
-    text-decoration: none;
-    padding: 0 5px;
-  color: white;
+.section-header a {
+  text-decoration: none;
+  padding: 0 5px;
+  color: inherit;
   position: relative;
 }
 
-.section-header a:after{
-	content: '';
-	position: absolute;
-	bottom: -8px;
-	left:0;
-	width: 100%;
-	height: 2px;
-	background: white;
-	transform: scale(0,1);
-	transition: transform 0.3s ease-in-out;
+.section-header a:after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transform: scale(0, 1);
+  transition: transform 0.3s ease-in-out;
 }
 
-.section-header a:hover:after{
-	transform: scale(1,1);
+.section-header a:hover:after {
+  transform: scale(1, 1);
 }
 
-.section-intro p{
-    /* transform: translateY(0%);
+.section-intro p {
+  /* transform: translateY(0%);
     opacity: 1; */
-    animation: slideUpFadeIn 1.2s linear 0s 1;
+  animation: slideUpFadeIn 1.2s linear 0s 1;
 }
 
-.section-aboutme{
+.section-aboutme {
   scroll-margin: 3rem;
 }
 @keyframes slideUpFadeIn {
-    0%{
-        transform: translateY(200px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0px);
-        opacity: 1;
-    }
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -175,9 +176,7 @@ footer {
     font-size: 1rem;
   }
 
-
-
-  .ITskills_btn{
+  .ITskills_btn {
     border: none;
     font-size: 0.8rem;
     padding: 15px 5px 15px 5px;
@@ -406,11 +405,11 @@ footer {
     font-size: 1.5rem;
   }
 
-  .section-aboutme li{
-      padding:0.5rem 0;
+  .section-aboutme li {
+    padding: 0.5rem 0;
   }
 
-  .ITskills_btn{
+  .ITskills_btn {
     border: none;
     font-size: 1.5rem;
     padding: 15px 5px 15px 5px;
@@ -438,7 +437,7 @@ footer {
   }
 
   .certificates_list li {
-    padding:0.5rem;
+    padding: 0.5rem;
   }
 
   .Calapp {
@@ -563,12 +562,12 @@ footer {
     background-color: #f88379;
     color: white;
     font-family: "Roboto", sans-serif;
-    flex-basis:auto;
+    flex-basis: auto;
     flex-grow: 0;
     font-size: 0.7rem;
     border-radius: 0.8rem;
     border: 0;
-    width:2rem;
+    width: 2rem;
     height: 1rem;
     transition: background-color 125ms;
   }
@@ -621,43 +620,40 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  .section-aboutme{
-      min-height: 33rem;
+  .section-aboutme {
+    min-height: 33rem;
   }
 
+  .section-aboutme ul {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 
+  .Calapp {
+    display: flex;
+    justify-content: flex-start;
+    padding: 3rem 3rem;
+    align-items: center;
+    gap: 1rem;
+  }
+  .Caldesc {
+    word-wrap: break-word;
+    width: 50%;
+    text-align: left;
+    padding-left: 3rem;
+  }
 
-    .section-aboutme ul{
-        padding-left: 3rem;
-        padding-right:3rem
-    }
+  .todoapp {
+    display: flex;
+    justify-content: flex-end;
+    padding: 3rem 3rem;
+    align-items: center;
+  }
 
-    .Calapp{
-      display: flex;
-      justify-content: flex-start;
-      padding: 3rem 3rem;
-      align-items: center;
-      gap:1rem;
-
-    }
-    .Caldesc{
-      word-wrap: break-word;
-      width: 50%;
-      text-align: left;
-      padding-left: 3rem;
-    }
-
-    .todoapp{
-      display: flex;
-      justify-content: flex-end;
-      padding: 3rem 3rem;
-      align-items: center;
-    }
-
-    .tododesc{
-      word-wrap: break-word;
-      width: 50%;
-      text-align: left;
-      padding-right:3rem;
-    }
+  .tododesc {
+    word-wrap: break-word;
+    width: 50%;
+    text-align: left;
+    padding-right: 3rem;
+  }
 }

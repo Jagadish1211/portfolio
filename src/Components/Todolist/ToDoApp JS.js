@@ -2,6 +2,7 @@ import React from "react";
 import './ToDoApp CSS.css';
 import Taskcard from './Components/Task_card';
 import {useState,useEffect} from "react";
+import {useGlobal} from "../../context/global"
 
 
  
@@ -10,6 +11,7 @@ function Todolistapp() {
   const [entry,setEntry] = useState("");
   const [editingEntry, setEditingEntry] = useState(-1);
   const [task,setTask] = useState([]);
+  const { updateGlobalState, globalState, incrementInteraction } = useGlobal();
 
 
   const handlechange =function Handlechange(change){
@@ -18,12 +20,15 @@ function Todolistapp() {
 
   const handlesubmit = (submit)=>{
     submit.preventDefault();
+    if(!entry.trim()) return;
    let newTask = [...task];
     newTask.push({
       id: newTask.length,
       taskname: entry,
     });
     setTask(newTask);
+    updateGlobalState("todoInteractions",(globalState?.todoInteractions || 0 )+ 1);
+    incrementInteraction("to-do");
     setEntry("");
     
   }
